@@ -6,6 +6,9 @@ npm install pagination-logic
 ```
 ### Usage
 ```js
+
+var pagination = require('pagination-logic');
+
 /*
 Provide a pageObject
 (total -- Number of items that will be paginated
@@ -15,8 +18,7 @@ Provide a pageObject
  pageLinkRule -- a funtion you link to the page you want, param is pageNumber
 )
 */
-function logicPaginate (pageObject){
-}
+var paginationResult = pagination(pageObject)
 
 ```
 
