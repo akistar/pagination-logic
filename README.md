@@ -37,37 +37,45 @@ test('middle', function(t) {
         }
     };
     const expectedOutput = {
-        pages: [
-            {
-                number: 4,
-                link: '/page/4',
-                isActive: false,
-            },
-            {
-                number: 5,
-                link: '/page/5',
-                isActive: false,
-            },
-            {
-                number: 6,
-                link: '/page/6',
-                isActive: true,
-            },
-            {
-                number: 7,
-                link: '/page/7',
-                isActive: false,
-            }
-        ],
-        pageCount: 9,
-        currentPage: 6,
-        hasPrevious: true,
-        hasNext: true,
-        previousPage: 5,
-        nextPage:7,
-        pageSize:4
+           pages: [
+               {
+                   number: 4,
+                   link: '/page/4',
+                   isActive: false,
+               },
+               {
+                   number: 5,
+                   link: '/page/5',
+                   isActive: false,
+               },
+               {
+                   number: 6,
+                   link: '/page/6',
+                   isActive: true,
+               },
+               {
+                   number: 7,
+                   link: '/page/7',
+                   isActive: false,
+               }
+           ],
+           pageCount: 9,
+           currentPage: 6,
+           hasPrevious: true,
+           hasNext: true,
+           previousPage: {
+               number: 5,
+               link: '/page/5',
+               isActive: false,
+           },
+           nextPage: {
+               number: 7,
+               link: '/page/7',
+               isActive: false,
+           },
+           pageSize: 4
 
-    };
+       };
     t.deepEqual(logicPaginate(input), expectedOutput)
 });
 ```

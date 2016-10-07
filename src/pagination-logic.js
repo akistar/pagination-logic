@@ -5,12 +5,21 @@ module.exports = function logicPaginate(pageObject) {
     pageInfo.hasPrevious = pageInfo.currentPage !== 1;
     pageInfo.hasNext = pageInfo.currentPage != pageInfo.pageCount;
     if (pageInfo.hasPrevious == true) {
-        pageInfo.previousPage = pageInfo.currentPage - 1
+        pageInfo.previousPage =
+            {
+                number: pageInfo.currentPage - 1,
+                link: pageObject.pageLinkRule(pageInfo.currentPage - 1),
+                isActive: false
+            }
     } else {
         pageInfo.previousPage = null
     }
     if (pageInfo.hasNext == true) {
-        pageInfo.nextPage = pageInfo.currentPage + 1
+        pageInfo.nextPage = {
+            number: pageInfo.currentPage + 1,
+            link: pageObject.pageLinkRule(pageInfo.currentPage + 1),
+            isActive: false
+        }
     } else {
         pageInfo.nextPage = null
     }

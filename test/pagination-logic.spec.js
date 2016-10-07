@@ -2,12 +2,11 @@ const test = require('ava');
 const logicPaginate = require('../src/pagination-logic');
 
 
-
-test('middle', function(t) {
+test('middle', function (t) {
     const input = {
         total: 50,
-        single:6,
-        pageSize:4,
+        single: 6,
+        pageSize: 4,
         currentPage: 6,
         pageLinkRule: (pageNumber) => {
             return `/page/${pageNumber}`;
@@ -40,19 +39,27 @@ test('middle', function(t) {
         currentPage: 6,
         hasPrevious: true,
         hasNext: true,
-        previousPage: 5,
-        nextPage:7,
-        pageSize:4
+        previousPage: {
+            number: 5,
+            link: '/page/5',
+            isActive: false,
+        },
+        nextPage: {
+            number: 7,
+            link: '/page/7',
+            isActive: false,
+        },
+        pageSize: 4
 
     };
     t.deepEqual(logicPaginate(input), expectedOutput)
 });
 
-test('firstPage', function(t) {
+test('firstPage', function (t) {
     const input = {
         total: 66,
-        single:6,
-        pageSize:4,
+        single: 6,
+        pageSize: 4,
         currentPage: 1,
         pageLinkRule: (pageNumber) => {
             return `/page/${pageNumber}`;
@@ -86,19 +93,23 @@ test('firstPage', function(t) {
         hasPrevious: false,
         hasNext: true,
         previousPage: null,
-        nextPage:2,
-        pageSize:4
+        nextPage: {
+            number: 2,
+            link: '/page/2',
+            isActive: false,
+        },
+        pageSize: 4
 
     };
     t.deepEqual(logicPaginate(input), expectedOutput)
 });
 
 
-test('lastSecond', function(t) {
+test('lastSecond', function (t) {
     const input = {
         total: 65,
-        single:6,
-        pageSize:5,
+        single: 6,
+        pageSize: 5,
         currentPage: 10,
         pageLinkRule: (pageNumber) => {
             return `/page/${pageNumber}`;
@@ -137,18 +148,26 @@ test('lastSecond', function(t) {
         currentPage: 10,
         hasPrevious: true,
         hasNext: true,
-        previousPage: 9,
-        nextPage:11,
-        pageSize:5
+        previousPage: {
+            number: 9,
+            link: '/page/9',
+            isActive: false,
+        },
+        nextPage: {
+            number: 11,
+            link: '/page/11',
+            isActive: false,
+        },
+        pageSize: 5
     };
     t.deepEqual(logicPaginate(input), expectedOutput)
 });
 
-test('last', function(t) {
+test('last', function (t) {
     const input = {
         total: 25,
-        single:6,
-        pageSize:4,
+        single: 6,
+        pageSize: 4,
         currentPage: 5,
         pageLinkRule: (pageNumber) => {
             return `/page/${pageNumber}`;
@@ -181,17 +200,21 @@ test('last', function(t) {
         currentPage: 5,
         hasPrevious: true,
         hasNext: false,
-        previousPage: 4,
-        nextPage:null,
-        pageSize:4
+        previousPage: {
+            number: 4,
+            link: '/page/4',
+            isActive: false,
+        },
+        nextPage: null,
+        pageSize: 4
     };
     t.deepEqual(logicPaginate(input), expectedOutput)
 });
-test('count<size', function(t) {
+test('count<size', function (t) {
     const input = {
         total: 25,
-        single:6,
-        pageSize:6,
+        single: 6,
+        pageSize: 6,
         currentPage: 5,
         pageLinkRule: (pageNumber) => {
             return `/page/${pageNumber}`;
@@ -229,9 +252,13 @@ test('count<size', function(t) {
         currentPage: 5,
         hasPrevious: true,
         hasNext: false,
-        previousPage: 4,
-        nextPage:null,
-        pageSize:6
+        previousPage: {
+            number: 4,
+            link: '/page/4',
+            isActive: false,
+        },
+        nextPage: null,
+        pageSize: 6
     };
     t.deepEqual(logicPaginate(input), expectedOutput)
 });
