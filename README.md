@@ -14,16 +14,16 @@ Provide a pageObject
  currentPage -- Number of the page you want to get
  pageLinkRule -- a funtion you link to the page you want, param is pageNumber
 )
+*/
 function logicPaginate (pageObject){
 }
-*/
+
 ```
 
 ###Example
-'''js
+```js
 const test = require('ava');
 const logicPaginate = require('../src/pagination-logic');
-
 
 
 test('middle', function(t) {
@@ -70,5 +70,5 @@ test('middle', function(t) {
     };
     t.deepEqual(logicPaginate(input), expectedOutput)
 });
-'''
+```
 
