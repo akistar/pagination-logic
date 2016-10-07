@@ -1,5 +1,5 @@
 const test = require('ava');
-const simplePaginate = require('../src/pagination-logic');
+const logicPaginate = require('../src/pagination-logic');
 
 
 
@@ -45,7 +45,7 @@ test('middle', function(t) {
         pageSize:4
 
     };
-    t.deepEqual(simplePaginate(input), expectedOutput)
+    t.deepEqual(logicPaginate(input), expectedOutput)
 });
 
 test('firstPage', function(t) {
@@ -90,7 +90,7 @@ test('firstPage', function(t) {
         pageSize:4
 
     };
-    t.deepEqual(simplePaginate(input), expectedOutput)
+    t.deepEqual(logicPaginate(input), expectedOutput)
 });
 
 
@@ -141,7 +141,7 @@ test('lastSecond', function(t) {
         nextPage:11,
         pageSize:5
     };
-    t.deepEqual(simplePaginate(input), expectedOutput)
+    t.deepEqual(logicPaginate(input), expectedOutput)
 });
 
 test('last', function(t) {
@@ -185,7 +185,7 @@ test('last', function(t) {
         nextPage:null,
         pageSize:4
     };
-    t.deepEqual(simplePaginate(input), expectedOutput)
+    t.deepEqual(logicPaginate(input), expectedOutput)
 });
 test('count<size', function(t) {
     const input = {
@@ -233,5 +233,5 @@ test('count<size', function(t) {
         nextPage:null,
         pageSize:6
     };
-    t.deepEqual(simplePaginate(input), expectedOutput)
+    t.deepEqual(logicPaginate(input), expectedOutput)
 });

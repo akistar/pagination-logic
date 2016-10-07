@@ -1,4 +1,4 @@
-module.exports = function simplePaginate(pageObject) {
+module.exports = function logicPaginate(pageObject) {
     var pageInfo = {};
     pageInfo.pageCount = Math.ceil((pageObject.total) / (pageObject.single))
     pageInfo.currentPage = pageObject.currentPage;
