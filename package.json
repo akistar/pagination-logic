@@ -1,0 +1,22 @@
+{
+  "name": "pagination-logic",
+  "version": "0.1.0",
+  "description": "",
+  "main": "pagination-logic.js",
+  "scripts": {
+    "test": "ava ./test/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akistar/pagination-logic.git"
+  },
+  "author": "akistar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akistar/pagination-logic/issues"
+  },
+  "homepage": "https://github.com/akistar/pagination-logic#readme",
+  "devDependencies": {
+    "ava": "^0.16.0"
+  }
+}

@@ -1,0 +1,78 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'info',
+1 verbose cli   'pagination-logic' ]
+2 info using npm@3.10.3
+3 info using node@v6.5.0
+4 silly mapToRegistry name pagination-logic
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npmjs.org/
+7 silly mapToRegistry data Result {
+7 silly mapToRegistry   raw: 'pagination-logic',
+7 silly mapToRegistry   scope: null,
+7 silly mapToRegistry   escapedName: 'pagination-logic',
+7 silly mapToRegistry   name: 'pagination-logic',
+7 silly mapToRegistry   rawSpec: '',
+7 silly mapToRegistry   spec: 'latest',
+7 silly mapToRegistry   type: 'tag' }
+8 silly mapToRegistry uri https://registry.npmjs.org/pagination-logic
+9 verbose request uri https://registry.npmjs.org/pagination-logic
+10 verbose request no auth needed
+11 info attempt registry request try #1 at 8:37:25 PM
+12 verbose request id 6f388265649dab5d
+13 http request GET https://registry.npmjs.org/pagination-logic
+14 http 404 https://registry.npmjs.org/pagination-logic
+15 verbose headers { 'content-type': 'application/json',
+15 verbose headers   'cache-control': 'max-age=0',
+15 verbose headers   'content-length': '2',
+15 verbose headers   'accept-ranges': 'bytes',
+15 verbose headers   date: 'Fri, 07 Oct 2016 07:37:26 GMT',
+15 verbose headers   via: '1.1 varnish',
+15 verbose headers   age: '0',
+15 verbose headers   connection: 'keep-alive',
+15 verbose headers   'x-served-by': 'cache-wlg7320-WLG',
+15 verbose headers   'x-cache': 'MISS',
+15 verbose headers   'x-cache-hits': '0',
+15 verbose headers   'x-timer': 'S1475825845.686647,VS0,VE839',
+15 verbose headers   vary: 'Accept-Encoding' }
+16 silly get cb [ 404,
+16 silly get   { 'content-type': 'application/json',
+16 silly get     'cache-control': 'max-age=0',
+16 silly get     'content-length': '2',
+16 silly get     'accept-ranges': 'bytes',
+16 silly get     date: 'Fri, 07 Oct 2016 07:37:26 GMT',
+16 silly get     via: '1.1 varnish',
+16 silly get     age: '0',
+16 silly get     connection: 'keep-alive',
+16 silly get     'x-served-by': 'cache-wlg7320-WLG',
+16 silly get     'x-cache': 'MISS',
+16 silly get     'x-cache-hits': '0',
+16 silly get     'x-timer': 'S1475825845.686647,VS0,VE839',
+16 silly get     vary: 'Accept-Encoding' } ]
+17 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/pagination-logic
+17 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+17 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+17 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+17 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:200:22)
+17 verbose stack     at emitTwo (events.js:106:13)
+17 verbose stack     at Request.emit (events.js:191:7)
+17 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+17 verbose stack     at emitOne (events.js:101:20)
+17 verbose stack     at Request.emit (events.js:188:7)
+17 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:988:12)
+18 verbose statusCode 404
+19 verbose pkgid pagination-logic
+20 verbose cwd /Users/akistar/pageSetting
+21 error Darwin 15.6.0
+22 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "info" "pagination-logic"
+23 error node v6.5.0
+24 error npm  v3.10.3
+25 error code E404
+26 error 404 Registry returned 404 for GET on https://registry.npmjs.org/pagination-logic
+27 error 404
+28 error 404 'pagination-logic' is not in the npm registry.
+29 error 404 You should bug the author to publish it (or use the name yourself!)
+30 error 404 Note that you can also install from a
+31 error 404 tarball, folder, http url, or git url.
+32 verbose exit [ 1, true ]
