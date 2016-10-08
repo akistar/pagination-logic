@@ -1,4 +1,5 @@
 ## pagination-logic
+[![Build Status](https://travis-ci.org/akistar/pagination-logic.svg?branch=master)](https://travis-ci.org/akistar/pagination-logic)  [![npm version](https://badge.fury.io/js/pagination-logic.svg)](https://badge.fury.io/js/pagination-logic)
 Pure Javascript pagination logic without UI component
 ### Installation
 ```
