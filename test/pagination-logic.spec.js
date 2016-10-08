@@ -49,7 +49,18 @@ test('middle', function (t) {
             link: '/page/7',
             isActive: false,
         },
-        pageSize: 4
+        pageSize: 4,
+        firstPage:{
+            number:1,
+            link: '/page/1',
+            isEllipsis: true
+        },
+        lastPage:{
+            number:9,
+            link: '/page/9',
+            isEllipsis: true
+        },
+
 
     };
     t.deepEqual(logicPaginate(input), expectedOutput)
@@ -98,7 +109,17 @@ test('firstPage', function (t) {
             link: '/page/2',
             isActive: false,
         },
-        pageSize: 4
+        pageSize: 4,
+        firstPage:{
+            number:1,
+            link: '/page/1',
+            isEllipsis: false
+        },
+        lastPage:{
+            number:11,
+            link: '/page/11',
+            isEllipsis: true
+        },
 
     };
     t.deepEqual(logicPaginate(input), expectedOutput)
@@ -158,7 +179,17 @@ test('lastSecond', function (t) {
             link: '/page/11',
             isActive: false,
         },
-        pageSize: 5
+        pageSize: 5,
+        firstPage:{
+            number:1,
+            link: '/page/1',
+            isEllipsis: true
+        },
+        lastPage:{
+            number:11,
+            link: '/page/11',
+            isEllipsis: false
+        },
     };
     t.deepEqual(logicPaginate(input), expectedOutput)
 });
@@ -206,7 +237,17 @@ test('last', function (t) {
             isActive: false,
         },
         nextPage: null,
-        pageSize: 4
+        pageSize: 4,
+        firstPage:{
+            number:1,
+            link: '/page/1',
+            isEllipsis: true
+        },
+        lastPage:{
+            number:5,
+            link: '/page/5',
+            isEllipsis: false
+        },
     };
     t.deepEqual(logicPaginate(input), expectedOutput)
 });
@@ -258,7 +299,17 @@ test('count<size', function (t) {
             isActive: false,
         },
         nextPage: null,
-        pageSize: 6
+        pageSize: 6,
+        firstPage:{
+            number:1,
+            link: '/page/1',
+            isEllipsis: false
+        },
+        lastPage:{
+            number:5,
+            link: '/page/5',
+            isEllipsis: false
+        },
     };
     t.deepEqual(logicPaginate(input), expectedOutput)
 });
