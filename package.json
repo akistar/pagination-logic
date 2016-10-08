@@ -1,6 +1,6 @@
 {
   "name": "pagination-logic",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Pure Javascript pagination logic without UI component",
   "main": "./src/pagination-logic.js",
   "scripts": {
