@@ -22,7 +22,7 @@ var paginationResult = pagination(pageObject)
 
 ```
 
-### Directive Attributes
+### Result Attributes
 
 <table>
   <thead>
